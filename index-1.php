@@ -871,13 +871,13 @@ development and operation of such teams.</p>
                 <p>+1 604 780 2711</p>
               </div>
 
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3185.7564529466786!2d-123.12176431368283!3d49.28343978725911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548673f143a94fb3%3A0xbb9196ea9b81f38b!2sVancouver%2C%20BC%2C%20Canada!5e0!3m2!1sen!2sng!4v1700059964841!5m2!1sen!2sng" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+              <iframe src="https://www.google.com/maps/dir/Networks+of+Centres+of+Excellence+Campus+Security,+6270+University+Blvd,+Vancouver,+BC+V6T+1Z4,+Canada/6270+University+Boulevard,+Vancouver,+BC+V6T+1Z4,+Canada/@49.2645802,-123.254657,17z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x548672b616e54c33:0x8b3b918797e0e25a!2m2!1d-123.2516798!2d49.2642887!1m5!1m1!1s0x548672b60aa9a671:0x8fc5fbe8a81bfa92!2m2!1d-123.2526425!2d49.2646863?entry=ttu" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
             </div>
 
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="https://script.google.com/macros/s/AKfycbzb3ZlEAqOC4eoRl4didpeox63-GDxAyecxZNb4amg0Oz2Ah3x3cIt-mO6juG4tybvG/exec" method="post" role="form" class="gform php-email-form">
+            <form action="index.php" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
@@ -902,6 +902,18 @@ development and operation of such teams.</p>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
               <div class="text-center"><button type="submit">Send Message</button></div>
+
+              <?php
+                // the message
+                $msg = "First line of text\nSecond line of text";
+
+                // use wordwrap() if lines are longer than 70 characters
+                $msg = wordwrap($msg,70);
+
+                // send email
+                mail("gentilityisworthwhile.com","My subject",$msg);
+                echo "<p>Message sent</p>";
+                ?>
             </form>
           </div>
 
@@ -939,7 +951,7 @@ development and operation of such teams.</p>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.umd.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script data-cfasync="false" type="text/javascript" src="forms/form-submission-handler.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
