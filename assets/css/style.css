@@ -262,6 +262,13 @@ h6 {
   min-width: 300px;
 }
 
+#hero .hero-container .hero-img {
+  position: relative;
+  width: 10em; 
+  height: 10em;
+  margin: auto;
+}
+
 #hero h1 {
   margin: 0 0 10px 200px;
   font-size: 64px;
